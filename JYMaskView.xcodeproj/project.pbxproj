@@ -13,6 +13,7 @@
 		B5C404E61C0D3D2F0052BD6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C404E41C0D3D2F0052BD6A /* Main.storyboard */; };
 		B5C404E81C0D3D2F0052BD6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5C404E71C0D3D2F0052BD6A /* Assets.xcassets */; };
 		B5C404EB1C0D3D2F0052BD6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5C404E91C0D3D2F0052BD6A /* LaunchScreen.storyboard */; };
+		B5C404F41C0D3EA60052BD6A /* JYMaskView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5C404F31C0D3EA60052BD6A /* JYMaskView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		B5C404E71C0D3D2F0052BD6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5C404EA1C0D3D2F0052BD6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B5C404EC1C0D3D2F0052BD6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5C404F21C0D3EA60052BD6A /* JYMaskView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JYMaskView.h; sourceTree = "<group>"; };
+		B5C404F31C0D3EA60052BD6A /* JYMaskView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JYMaskView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +70,8 @@
 				B5C404E91C0D3D2F0052BD6A /* LaunchScreen.storyboard */,
 				B5C404EC1C0D3D2F0052BD6A /* Info.plist */,
 				B5C404DB1C0D3D2F0052BD6A /* Supporting Files */,
+				B5C404F21C0D3EA60052BD6A /* JYMaskView.h */,
+				B5C404F31C0D3EA60052BD6A /* JYMaskView.m */,
 			);
 			path = JYMaskView;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5C404E31C0D3D2F0052BD6A /* ViewController.m in Sources */,
+				B5C404F41C0D3EA60052BD6A /* JYMaskView.m in Sources */,
 				B5C404E01C0D3D2F0052BD6A /* AppDelegate.m in Sources */,
 				B5C404DD1C0D3D2F0052BD6A /* main.m in Sources */,
 			);
@@ -213,7 +219,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -251,7 +257,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
