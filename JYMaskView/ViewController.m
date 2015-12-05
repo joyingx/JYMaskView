@@ -22,7 +22,8 @@
     
     [self.maskView addTransparentRect:CGRectMake(20, 20, 100, 100)];
     [self.maskView addTransparentRoundedRect:CGRectMake(20, 140, 100, 100) cornerRadius:50];
-    [self.maskView addTransparentRoundedRect:CGRectMake(140, 20, 100, 100) byRoundingCorners:UIRectCornerTopLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(60, 20)];
+    [self.maskView addTransparentRoundedRect:CGRectMake(140, 20, 100, 100) byRoundingCorners:UIRectCornerTopLeft | UIRectCornerBottomRight cornerRadii:CGSizeMake(20, 20)];
+    [self.maskView addTransparentOvalRect:CGRectMake(140, 140, 150, 100)];
     self.maskView.maskColor = [UIColor colorWithWhite:0 alpha:0.6];
 }
 

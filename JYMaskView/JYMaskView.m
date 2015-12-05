@@ -45,6 +45,12 @@
 
 #pragma mark - Public Methods
 
+- (void)reset {
+    [self.transparentPaths removeAllObjects];
+    
+    [self refreshMask];
+}
+
 - (void)addTransparentPath:(UIBezierPath *)transparentPath {
     [self.overlayPath appendPath:transparentPath];
     
@@ -73,6 +79,12 @@
     [self addTransparentPath:transparentPath];
 }
 
+- (void)addTransparentOvalRect:(CGRect)rect {
+    UIBezierPath *transparentPath = [UIBezierPath bezierPathWithOvalInRect:rect];
+    
+    [self addTransparentPath:transparentPath];
+}
+
 #pragma mark - Private Methods
 
 - (void)setUp {
@@ -84,9 +96,15 @@
     self.fillLayer.fillColor = self.maskColor.CGColor;
 }
 
-- (UIBezierPath *)currentOverlayPath {
+- (UIBezierPath *)generateOverlayPath {
     UIBezierPath *overlayPath = [UIBezierPath bezierPathWithRect:self.bounds];
     [overlayPath setUsesEvenOddFillRule:YES];
+    
+    return overlayPath;
+}
+
+- (UIBezierPath *)currentOverlayPath {
+    UIBezierPath *overlayPath = [self generateOverlayPath];
     
     for (UIBezierPath *transparentPath in self.transparentPaths) {
         [overlayPath appendPath:transparentPath];
@@ -107,7 +125,7 @@
 
 - (UIBezierPath *)overlayPath {
     if (!_overlayPath) {
-        _overlayPath = [self currentOverlayPath];
+        _overlayPath = [self generateOverlayPath];
     }
     
     return _overlayPath;
